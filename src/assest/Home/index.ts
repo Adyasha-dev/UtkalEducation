@@ -1,0 +1,15 @@
+export {default as home2} from "./home2.jpg";
+export{default as course1} from "./course1.jpg";
+export {default as course2} from "./course2.jpg";
+export {default as course3} from "./course3.jpg";
+export {default as education2} from "./education2.jpg";
+export {default as news4} from "./news4.jpg";
+export {default as news5} from "./news5.jpg";
+export{default as news6} from "./news6.jpg";
+export {default as Logo1} from "./Logo1.jpg";
+export {default as Logo2} from "./Logo2.jpg";
+export {default as Logo3} from "./Logo3.jpg";
+export {default as Logo5} from "./Logo5.jpg";
+export {default as Logo6} from "./Logo6.jpg";
+export {default as Elearning} from "./Elearning.jpg";
+export {default as last} from "./last.jpg";

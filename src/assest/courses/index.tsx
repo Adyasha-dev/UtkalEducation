@@ -1,0 +1,9 @@
+export { default as course1 } from "./course1.jpg";
+export { default as course2 } from "./course2.jpg";
+export { default as course3 } from "./course3.jpg";
+export { default as four } from "./four.jpg";
+export { default as five } from "./five.jpg";
+export { default as six } from "./six.jpg";
+export { default as seven } from "./seven.jpg";
+export { default as nine } from "./nine.webp";
+export { default as tenth } from "./tenth.jpeg";

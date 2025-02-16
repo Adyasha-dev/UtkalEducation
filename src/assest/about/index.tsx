@@ -1,0 +1,12 @@
+export { default as Elearning2 } from "./Elearning2.webp";
+export { default as one } from "./one.jpg";
+export { default as two } from "./two.jpg";
+export { default as Team5 } from "./Team5.jpg";
+export { default as Team6 } from "./Team6.jpg";
+export { default as Team7 } from "./Team7.jpg";
+export { default as Team8 } from "./Team8.jpg";
+export { default as faq12 } from "./faq12.jpg";
+export { default as faq13 } from "./faq13.jpg";
+export { default as Certifications1 } from "./Certifications1.jpg";
+export { default as Certifications2 } from "./Certifications2.jpg";
+export { default as Certifications3 } from "./Certifications3.jpg";

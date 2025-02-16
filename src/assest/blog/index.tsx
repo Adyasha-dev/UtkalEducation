@@ -1,0 +1,14 @@
+export { default as Blog1 } from "./Blog1.jpg";
+export { default as Blog2 } from "./Blog2.jpg";
+export { default as Blog3 } from "./Blog3.jpg";
+export { default as Blog4 } from "./Blog4.jpg";
+export { default as Blog5 } from "./Blog5.jpg";
+export { default as Blog6 } from "./Blog6.jpg";
+export { default as Blog7 } from "./Blog7.jpg";
+export { default as Blog8 } from "./Blog8.jpg";
+export { default as teacher1 } from "./teacher1.jpg";
+export { default as teacher2 } from "./teacher2.jpg";
+export { default as teacher3 } from "./teacher3.jpg";
+export { default as course12 } from "./course12.jpg";
+export { default as course13 } from "./course13.jpg";
+export { default as course14 } from "./course14.jpg";
