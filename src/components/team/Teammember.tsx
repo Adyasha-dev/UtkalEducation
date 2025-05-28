@@ -8,8 +8,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import Image from "next/image";
 function Teammember() {
-  const itemsPerPage = 12;
+  const itemsPerPage = 9;
 
   const [currentPage, setCurrentPage] = useState(1);
   const [courselist, setCourselist] = useState<teamArrType[]>([]);
@@ -37,12 +38,13 @@ function Teammember() {
     <>
       <section className="overflow-hidden main-container py-24">
         <div className=" main-container  gap-10 py-14  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {team2Arr.map((item) => (
+          {courselist.map((item) => (
             <div
               className="shadow-md rounded-md bg-white py-4 px-4 "
               key={item.id.toString()}
             >
-              <img
+              <Image
+                alt={item.name}
                 src={item.img.src}
                 className="hover:scale-105 h-[20rem] w-[28rem] overflow-hidden"
               />

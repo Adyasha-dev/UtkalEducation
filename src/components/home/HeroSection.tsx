@@ -2,20 +2,21 @@ import React from "react";
 function HeroSection() {
   return (
     <>
-      <section className="w-full main-container py-11 lg:flex  gap-16 ">
+      <section className="w-full main-container py-11 lg:flex   ">
         <div className="w-full bg-white flex flex-col lg:w-1/2 ">
-          <p className="text-black font-extrabold text-3xl lg:text-5xl mt-3">
-            Choose The Design Tool You Want To Learn
+          <p className="text-black font-extrabold text-2xl lg:text-5xl mt-3">
+            Shaping Careers, Building a Skilled Workforce
           </p>
           <p className="text-slate-400 text-xl mt-3 ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ulla mco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            At Utkal Education Pvt. Ltd., we are on a mission to revolutionize
+            education through innovative and accessible learning solutions. By
+            bridging the gap between academic knowledge and real-world
+            applications, we empower individuals and organizations to stay
+            competitive in an evolving landscape. Our approach integrates
+            technical expertise with behavioral training, fostering a culture of
+            continuous learning and adaptability.
           </p>
-          <button className="border-black text-orange-500 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md lg:w-56 md:w-40 border-2 border-solid mt-3  ">
+          <button className="border-black text-orange-500 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md lg:w-56 md:w-40 border-2 border-solid my-3 ">
             VIEW AII Courses
           </button>
         </div>

@@ -1,6 +1,6 @@
 import { news1Arr } from "@/utils/home";
 import React from "react";
-
+import Image from "next/image";
 function News1() {
   return (
     <div className="main-container py-6 bg-white ">
@@ -11,7 +11,11 @@ function News1() {
             className="w-full shadow-md  rounded-md bg-white gap-5"
             key={item.id.toString()}
           >
-            <img src={item.img.src} className="w-full hover:scale-105" />
+            <Image
+              src={item.img.src}
+              alt={item.title}
+              className="w-full hover:scale-105"
+            />
             <div className="flex  gap-3 px-2 py-2 ">
               <span className="flex flex-col border-solid border-yellow-300 border-2 text-center">
                 <p className="text-yellow-400">{item.count}</p>

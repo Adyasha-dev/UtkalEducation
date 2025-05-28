@@ -16,29 +16,26 @@ export const content1Arr: content1ArrType[] = [
     id: 1,
     count: "23",
     title: "Year Of Experience",
-    description:
-      "Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod tempor incididunt labore",
+    description: "Providing top-tier education and training solutions.",
   },
   {
     id: 2,
     count: "59",
     title: "Year Of Experience",
-    description:
-      "Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod tempor incididunt labore",
+    description: "Designed to meet industry standards and job market demands",
   },
   {
     id: 3,
     count: "15",
     title: "Year Of Experience",
-    description:
-      "Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod tempor incididunt labore",
+    description: "Successfully upskilling professionals across various sectors",
   },
   {
     id: 4,
     count: "100",
     title: "Year Of Experience",
     description:
-      "Lorem ipsum dolor sit amet consecte tur adipiscing elit, sed do eiusmod tempor incididunt labore",
+      "Ensuring learners achieve career success through expert guidance",
   },
 ];
 import { TeacherArrType } from "@/types";
@@ -81,33 +78,33 @@ export const faqArr: faqArrType[] = [
   {
     id: 1,
     icon: <AddIcon />,
-    question: "Why Our Clinic?",
+    question: "Why Choose Utkal Education?",
     answer:
-      "Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+      "At Utkal Education, we provide industry-aligned training programs designed to bridge the skill gap in the workforce. Our courses are curated by experts, ensuring quality education that enhances career growth.",
     img: faq12,
   },
   {
     id: 2,
     icon: <AddIcon />,
-    question: "Qualified Experts",
+    question: "Who Are the Trainers?",
     answer:
-      "Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+      "Our trainers are certified professionals with years of experience in their respective fields. They bring practical insights, making learning more effective and engaging.",
     img: faq13,
   },
   {
     id: 3,
     icon: <AddIcon />,
-    question: "Quick Access to The Patient",
+    question: "How Can I Enroll in a Course?",
     answer:
-      "Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+      "Enrolling is simple! Visit our website, choose your preferred course, and follow the step-by-step enrollment process. You can also reach out to our support team for guidance.",
     img: faq13,
   },
   {
     id: 4,
     icon: <AddIcon />,
-    question: "How can an architect save you money on your home design?",
+    question: " Will I Receive a Certification?",
     answer:
-      "Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+      "Yes! Upon successful completion of your course, you will receive a globally recognized certificate that enhances your professional credibility.",
     img: faq13,
   },
 ];

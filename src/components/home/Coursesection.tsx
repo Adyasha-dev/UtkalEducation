@@ -1,13 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Link from "next/link"; // Import Link for navigation
+import "aos/dist/aos.css"; // Import Link for navigation
 import { cardArr } from "@/utils/home";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import Image from "next/image";
 const settings = {
   dots: true,
   infinite: true,
@@ -40,7 +39,7 @@ export default function Breadcrumb() {
       <Slider {...settings}>
         {cardArr.map((item, index) => (
           <div key={index} className="w-full shadow-md nset-shadow-xs">
-            <img src={item.img.src} className="" />
+            <Image src={item.img.src} className="" alt={item.coursename} />
             <div className=" flex gap-14  mt-4">
               <span className=" flex flex-col ">
                 <p>{item.coursename}</p>

@@ -24,10 +24,12 @@ function ESection4() {
           <p className="text-gray-500 text-2xl font-semibold">
             Join <span className="text-orange-400 text-5xl">458595</span> people
           </p>
-          <p className="text-gray-200 text-lg mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud.
+          <p className="text-gray-200 text-sm  mt-2">
+            Unlock new opportunities with Utkal Education! Our customized
+            training programs equip you with the skills needed to stay ahead in
+            today’s evolving job market. Whether you&apos;re an aspiring
+            professional, a corporate employee, or a contract worker, we have
+            the right learning solutions for you.
           </p>
           <button className=" w-auto mx-auto  mt-4 px-6 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition">
             Join Now

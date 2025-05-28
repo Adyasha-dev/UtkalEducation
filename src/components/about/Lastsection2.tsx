@@ -86,9 +86,10 @@ import { Collapse } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 function Lastsection2() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -169,7 +170,7 @@ function Lastsection2() {
                   className="flex flex-col items-center"
                   key={item.id.toString()}
                 >
-                  <img
+                  <Image
                     src={item.img.src}
                     className="w-full h-auto rounded-md object-cover"
                     alt="Certificate"

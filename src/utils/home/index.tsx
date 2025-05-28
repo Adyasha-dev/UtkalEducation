@@ -15,21 +15,21 @@ import { contentArrType } from "@/types";
 export const contentArr: contentArrType[] = [
   {
     id: 1,
-    title: "Empowering minds, enriching lives through education.",
+    title: "Transforming Education for a Brighter Future",
     description:
-      "Believe in yourself, achieve greatness. Education is the foundation of success.",
+      "At Utkal Education Pvt. Ltd., we transform education with innovative learning experiences, seamlessly connecting academic knowledge with real-world applications.",
   },
   {
     id: 2,
-    title: "Empowering minds, enriching lives through education.",
+    title: "Bridging Education & Industry Needs",
     description:
-      "Believe in yourself, achieve greatness. Education is the foundation of success.",
+      "Utkal Education Pvt. Ltd. is committed to transforming learning by integrating academic excellence with practical applications, equipping individuals with the skills needed to thrive in today’s dynamic world.",
   },
   {
     id: 3,
-    title: "Empowering minds, enriching lives through education.",
+    title: "Innovative Learning for a Better Tomorrow",
     description:
-      "Believe in yourself, achieve greatness. Education is the foundation of success.",
+      "We at Utkal Education Pvt. Ltd. offer comprehensive and accessible education solutions that connect theory with real-world practice, empowering learners to succeed in their careers and beyond.",
   },
 ];
 
@@ -73,30 +73,30 @@ import { newsArrType } from "@/types";
 export const news1Arr: newsArrType[] = [
   {
     id: 1,
-    title: "Those Other College Expenses You Aren't Thinking About",
+    title: "Empowering Professionals with Future-Ready Skills",
     img: news4,
     count: 18,
     month: "January",
     description:
-      "Thousands of teenagers across the UK will have school lessons in mindfulness in an experiment designed to see if it can protect against mental illness.",
+      "Utkal Education has launched a new set of training programs designed to equip professionals with cutting-edge technical and behavioral skills, ensuring career growth and adaptability in a rapidly changing job market.",
   },
   {
     id: 2,
-    title: "Those Other College Expenses You Aren't Thinking About",
+    title: "Bridging the Gap Between Education & Industry Needs",
     img: news5,
     count: 17,
     month: "may",
     description:
-      "Thousands of teenagers across the UK will have school lessons in mindfulness in an experiment designed to see if it can protect against mental illness.",
+      "Our latest initiatives focus on practical learning experiences, connecting academic knowledge with real-world industry requirements. Stay ahead with our hands-on training and industry-aligned curriculum.",
   },
   {
     id: 3,
-    title: "Those Other College Expenses You Aren't Thinking About",
+    title: "Digital Learning Revolution: Smart Education for Everyone",
     img: news6,
     count: 19,
     month: "April",
     description:
-      "Thousands of teenagers across the UK will have school lessons in mindfulness in an experiment designed to see if it can protect against mental illness.",
+      "We are integrating smart learning tools to make education more interactive, engaging, and accessible. From online courses to AI-driven learning modules, we are shaping the future of education.",
   },
 ];
 import { boxArrType } from "@/types";

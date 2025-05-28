@@ -10,9 +10,9 @@ function Lastsection() {
           Have any question for us?
         </p>
         <p className="text-sm text-gray-500 px-3 md:text-xl">
-          Claritas est etiam processus dynamicus, qui sequitur mutationem
-          consuetudium lectorum. Mirum est notare quam littera gothica, quam
-          nunc putamus parum
+          Education is a journey, and we understand that you may have questions.
+          Whether it&apos;s about our courses, enrollment process,
+          certifications, or career guidance, we’re here to assist you.
         </p>
         <span className="flex text-orange-500 md:text-xl">
           <p>Go to QAs Page</p>
@@ -35,9 +35,9 @@ function Lastsection() {
             NEWSLETTER
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6">
-            Subscribe now and receive a weekly newsletter with educational
-            materials, new courses, interesting posts, popular books, and much
-            more!
+            Subscribe to our newsletter and stay updated with the latest
+            courses, expert insights, and exclusive learning resources from
+            Utkal Education
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <TextField

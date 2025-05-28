@@ -9,12 +9,17 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import Image from "next/image";
 function Footer() {
   return (
     <>
       <div className="main-container grid grid-cols-1  md:grid-cols-2  lg:grid-cols-4 bg-black gap-2 justify-center px-3 py-2 ">
         <div className="  flex flex-col w-full justify-center ">
-          <img src={Footer1.src} className="h-32rem w-32rem " />
+          <Image
+            src={Footer1.src}
+            className="h-32rem w-32rem "
+            alt="Footer 1"
+          />
           <span className="flex ">
             <FmdGoodIcon className="text-white" />
             <p className=" text-sm text-white">
@@ -53,13 +58,13 @@ function Footer() {
         <div className=" w-full flex flex-col gap-4 px-3">
           <p className="text-2xl text-white">Recent Course</p>
           <span className="flex gap-3">
-            <img src={Footer2.src} className="h-16 w-24" />
+            <Image src={Footer2.src} className="h-16 w-24" alt="Footer 2" />
             <span className="flex flex-col">
               <p className="text-white text-sm">UI-UX Designer Courses</p>
             </span>
           </span>
           <span className="flex gap-3">
-            <img src={Footer3.src} className="h-16 w-24" />
+            <Image src={Footer3.src} className="h-16 w-24" alt="Footer 3" />
             <span className="flex flex-col">
               <p className="text-white text-sm">PHP Shopify Courses</p>
             </span>

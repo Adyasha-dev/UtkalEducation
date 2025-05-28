@@ -8,7 +8,6 @@ import News1 from "@/components/home/News1";
 import HeroSection from "@/components/home/HeroSection";
 import Box1 from "@/components/home/Box1";
 import Esection7 from "@/components/home/Esection7";
-import Image from "next/image";
 import Lastsection from "@/components/home/Lastsection";
 export default function Home() {
   return (

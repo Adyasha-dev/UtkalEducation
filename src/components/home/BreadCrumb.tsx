@@ -7,7 +7,8 @@ import Slider from "react-slick";
 import { contentArr } from "@/utils/home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-var settings = {
+import Image from "next/image";
+const settings = {
   dots: true,
   infinite: true,
   speed: 500,
@@ -32,16 +33,16 @@ export default function BreadCrumb() {
         data-aos-easing="linear"
         data-aos-duration="1500"
       >
-        <img src={home2.src} className=" w-full h-auto" />
+        <Image src={home2.src} alt="Home 2" className=" w-full h-auto" />
         <div className="absolute inset-0  bg-black/50"></div>
         <div className="  z-30 absolute top-1/2 !-translate-y-1/2 bottom-0 right-0 left-0 ">
           <Slider {...settings}>
             {contentArr.map((item) => (
               <div key={item.id.toString()} className="w-full h-screen ">
-                <h3 className="text-white font-bold text-3xl  flex justify-center gap-6">
+                <h3 className="text-white font-bold text-xl  md:text-3xl  flex justify-center gap-6 ">
                   {item.title}
                 </h3>
-                <h3 className="text-white text-sm flex justify-center gap-6 ">
+                <h3 className="text-white text-sm flex justify-center gap-6 px-2 ">
                   {item.description}
                 </h3>
               </div>

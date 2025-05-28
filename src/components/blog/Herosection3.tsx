@@ -18,10 +18,12 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import Image from "next/image";
 function Herosection3() {
   const itemsPerPage = 9;
 
   const [currentPage, setCurrentPage] = useState(1);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [courselist, setCourselist] = useState<blogArrType[]>([]);
 
   const handlePrevPageNavigation = () => {
@@ -55,8 +57,9 @@ function Herosection3() {
                   className="w-full shadow-md  rounded-md bg-white gap-5"
                   key={item.id.toString()}
                 >
-                  <img
+                  <Image
                     src={item.img.src}
+                    alt="Blog Image"
                     className=" hover:scale-105 overflow-hidden"
                   />
 
@@ -96,7 +99,7 @@ function Herosection3() {
             <div className="text-3xl font-medium">RECENT POST</div>
             <div className="flex flex-col gap-4">
               <div className="flex  flex-1 w-[25rem] mt-5 gap-4">
-                <img src={Blog2.src} className="h-20 w-30" />
+                <Image src={Blog2.src} className="h-20 w-30" alt="Blog 2" />
                 <span className="flex flex-col mx-auto flex-1">
                   <p className="text-sm font-normal md:text-xl md:font-medium  ">
                     New Chicago school budget relies on state pension
@@ -105,7 +108,7 @@ function Herosection3() {
                 </span>
               </div>
               <div className="flex  flex-1 w-[25rem]  gap-4">
-                <img src={Blog1.src} className="h-20 w-30" />
+                <Image src={Blog1.src} className="h-20 w-30" alt="Blog 1" />
                 <span className="flex flex-col">
                   <p className="  text-sm font-normal md:text-xl md:font-medium">
                     New Chicago school budget relies on state pension
@@ -114,7 +117,7 @@ function Herosection3() {
                 </span>
               </div>
               <div className="flex  flex-1 w-[25rem] gap-4">
-                <img src={Blog3.src} className="h-20 w-30" />
+                <Image src={Blog3.src} className="h-20 w-30" alt="Blog 3" />
                 <span className="flex flex-col">
                   <p className="text-sm font-normal md:text-xl md:font-medium">
                     New Chicago school budget relies on state pension
@@ -148,7 +151,8 @@ function Herosection3() {
               <div className="flex flex-col mt-4">
                 <div className="flex gap-5 ">
                   <div className="flex gap-6">
-                    <img
+                    <Image
+                      alt="teacher1"
                       src={teacher1.src}
                       className="h-20 w-32 rounded-full"
                     />
@@ -167,7 +171,11 @@ function Herosection3() {
               </div>
               <div className="flex flex-col mt-4">
                 <div className="flex gap-5">
-                  <img src={teacher2.src} className="h-20 w-32 rounded-full" />
+                  <Image
+                    src={teacher2.src}
+                    className="h-20 w-32 rounded-full"
+                    alt="Teacher 2"
+                  />
                   <span className="flex flex-col ">
                     <p>Charlie Brown</p>
                     <p>Web Designer</p>
@@ -183,7 +191,8 @@ function Herosection3() {
               <div className="flex flex-col mt-4">
                 <div className="flex gap-5">
                   <span className="flex gap-6">
-                    <img
+                    <Image
+                      alt="teacher3"
                       src={teacher3.src}
                       className="h-20 w-32 rounded-full "
                     />
@@ -203,7 +212,7 @@ function Herosection3() {
             </div>
             <div className="text-3xl font-medium mt-4">FEATURED COURSES</div>
             <div className="flex mt-3 gap-5">
-              <img src={course12.src} />
+              <Image src={course12.src} alt="Course 12" />
               <span className="flex flex-col">
                 <p>swift programming for beginners</p>
                 <p>Sarah Johnson</p>
@@ -222,7 +231,7 @@ function Herosection3() {
               </span>
             </div>
             <div className="flex  mt-3 gap-5">
-              <img src={course13.src} />
+              <Image src={course13.src} alt="Course 13" />
               <span className="flex flex-col">
                 <p>swift programming for beginners</p>
                 <p>Sarah Johnson</p>
@@ -241,7 +250,7 @@ function Herosection3() {
               </span>
             </div>
             <div className="flex  mt-3 gap-5">
-              <img src={course14.src} />
+              <Image src={course14.src} alt="Course 14" />
               <span className="flex flex-col">
                 <p>swift programming for beginners</p>
                 <p>Sarah Johnson</p>

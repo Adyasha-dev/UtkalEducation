@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Esection7() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -41,18 +41,18 @@ function Esection7() {
             >
               <SmsIcon className="!text-5xl text-purple-600 mb-4" />
               <p className="text-xl text-gray-800 mb-4">
-                Education is the foundation of personal growth, empowerment, and
-                societal progress. It enables individuals to acquire knowledge,
-                skills, and values that foster critical thinking, creativity,
-                and innovation. Through education, people can unlock their full
-                potential, overcome challenges, and contribute positively to the
-                world around them.
+                Education is the cornerstone of growth and transformation. At
+                Utkal Education, we believe in equipping individuals with the
+                right skills, knowledge, and mindset to bridge the gap between
+                education and industry needs. By fostering critical thinking,
+                innovation, and adaptability, we empower learners to thrive in
+                the ever-evolving professional landscape.
               </p>
               <p className="text-2xl text-gray-900 font-medium">
                 Donal Sampson
               </p>
-              <p className="text-lg text-gray-700">
-                Founder & CEO, Arcade Systems
+              <p className="text-sm text-gray-700">
+                Founder & CEO, Utkal Education Pvt. Ltd.
               </p>
             </div>
           ))}

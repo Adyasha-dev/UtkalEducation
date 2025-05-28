@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { card2Arr } from "@/utils/courses";
 import { card2ArrType } from "@/types";
+import Image from "next/image";
 function Course2() {
   const itemsPerPage = 9;
 
@@ -38,7 +38,7 @@ function Course2() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 ">
           {courselist.map((item, index) => (
             <div key={index} className="w-full shadow-md nset-shadow-xs">
-              <img src={item.img.src} className="" />
+              <Image src={item.img.src} alt={item.coursename} className="" />
               <div className=" flex gap-14  mt-4">
                 <span className=" flex flex-col ">
                   <p>{item.coursename}</p>

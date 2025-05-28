@@ -16,6 +16,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -54,9 +55,12 @@ function Teacher() {
             {teacherArr.map((item) => (
               <SwiperSlide key={item.id.toString()}>
                 <div className="shadow-md rounded-md bg-white py-4 px-4 ">
-                  <img
+                  <Image
                     src={item.img.src}
-                    className="hover:scale-105 h-[28rem] w-[28rem]"
+                    alt={item.name}
+                    width={320}
+                    height={320}
+                    className="hover:scale-105 object-cover"
                   />
                   <div className="text-2xl text-gray mt-2 ">{item.name}</div>
 
