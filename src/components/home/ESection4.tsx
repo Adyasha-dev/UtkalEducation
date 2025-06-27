@@ -10,8 +10,8 @@ function ESection4() {
         <Image
           src={education2}
           alt="Education Background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           className="absolute z-0"
           priority
         />

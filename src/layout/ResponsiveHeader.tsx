@@ -17,7 +17,8 @@ function ResponsiveHeader() {
           <Link href="/">
             <Image
               src={utkaleducation.src}
-              className="h-[10rem] w-[10rem] "
+              width={100}
+              height={100}
               alt="Utkal Education"
             />
           </Link>

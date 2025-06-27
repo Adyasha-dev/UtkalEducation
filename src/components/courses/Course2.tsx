@@ -32,13 +32,18 @@ function Course2() {
   }, [currentPage]);
   return (
     <div>
-      <section className="overflow-hidden main-container py-24">
-        <p className="text-5xl font-bold mb-4">POPULAR COURSES</p>
+      <section className="overflow-hidden main-container py-8">
+        <p className=" text-2xl font-bold mb-4">POPULAR COURSES</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 ">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  gap-8 ">
           {courselist.map((item, index) => (
             <div key={index} className="w-full shadow-md nset-shadow-xs">
-              <Image src={item.img.src} alt={item.coursename} className="" />
+              <Image
+                src={item.img.src}
+                alt={item.coursename}
+                width={500}
+                height={300}
+              />
               <div className=" flex gap-14  mt-4">
                 <span className=" flex flex-col ">
                   <p>{item.coursename}</p>
@@ -60,7 +65,7 @@ function Course2() {
                     </span>
                   </span>
                 </span>
-                <button className="text-sm text-white bg-blue-500 px-3 roundend-md py-0 ">
+                <button className="text-sm text-white bg-blue-500 px-3 roundend-sm  py-0 ">
                   ${item.price}
                 </button>
               </div>

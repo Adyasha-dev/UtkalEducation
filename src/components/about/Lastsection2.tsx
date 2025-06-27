@@ -174,6 +174,8 @@ function Lastsection2() {
                     src={item.img.src}
                     className="w-full h-auto rounded-md object-cover"
                     alt="Certificate"
+                    width={500}
+                    height={300}
                   />
                   <p className="text-gray-400 text-xl mt-2">{item.content}</p>
                 </div>

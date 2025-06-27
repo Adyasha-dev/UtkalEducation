@@ -47,6 +47,8 @@ function Teammember() {
                 alt={item.name}
                 src={item.img.src}
                 className="hover:scale-105 h-[20rem] w-[28rem] overflow-hidden"
+                width="500"
+                height="300"
               />
               <div className="text-2xl text-gray mt-2 ">{item.name}</div>
 

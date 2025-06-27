@@ -6,21 +6,21 @@ function Lastsection() {
   return (
     <>
       <div className=" w-full flex flex-col justify-center items-center mb-4 ">
-        <p className="text-3xl font-medium md:text-5xl md:font-bold">
+        <p className="text-3xl font-medium md:text-4xl md:font-bold">
           Have any question for us?
         </p>
-        <p className="text-sm text-gray-500 px-3 md:text-xl">
+        <p className="text-sm  text-gray-500  md:max-w-3xl px-3 md:text-xl">
           Education is a journey, and we understand that you may have questions.
           Whether it&apos;s about our courses, enrollment process,
           certifications, or career guidance, we’re here to assist you.
         </p>
         <span className="flex text-orange-500 md:text-xl">
           <p>Go to QAs Page</p>
-          <ArrowForwardIcon />
+          <ArrowForwardIcon className="!text-xl" />
         </span>
       </div>
       <div
-        className="flex justify-center items-center text-center py-14 px-4"
+        className=" relative flex justify-center items-center text-center  px-4"
         style={{
           backgroundImage: `url(${last.src})`,
           backgroundPosition: "center",
@@ -30,8 +30,8 @@ function Lastsection() {
           width: "100vw",
         }}
       >
-        <div className="bg-white/80 p-6 mt-[28rem]  rounded-lg shadow-lg max-w-3xl w-full">
-          <p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        <div className="absolute  p-6  mt-[30rem] md:mt-[45rem] lg:mt-[30rem]  rounded-lg shadow-lg max-w-3xl md:max-w-xl lg:max-w-4xl w-full">
+          <p className="text-3xl  md:text-4xl lg:text-4xl font-bold mb-4">
             NEWSLETTER
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6">

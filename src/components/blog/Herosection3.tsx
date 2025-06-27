@@ -61,6 +61,8 @@ function Herosection3() {
                     src={item.img.src}
                     alt="Blog Image"
                     className=" hover:scale-105 overflow-hidden"
+                    width={500}
+                    height={300}
                   />
 
                   <div className="flex  gap-3 px-2 py-2 ">
@@ -99,7 +101,7 @@ function Herosection3() {
             <div className="text-3xl font-medium">RECENT POST</div>
             <div className="flex flex-col gap-4">
               <div className="flex  flex-1 w-[25rem] mt-5 gap-4">
-                <Image src={Blog2.src} className="h-20 w-30" alt="Blog 2" />
+                <Image src={Blog2.src} width={30} height={20} alt="Blog 2" />
                 <span className="flex flex-col mx-auto flex-1">
                   <p className="text-sm font-normal md:text-xl md:font-medium  ">
                     New Chicago school budget relies on state pension
@@ -108,7 +110,7 @@ function Herosection3() {
                 </span>
               </div>
               <div className="flex  flex-1 w-[25rem]  gap-4">
-                <Image src={Blog1.src} className="h-20 w-30" alt="Blog 1" />
+                <Image src={Blog1.src} width={30} height={20} alt="Blog 1" />
                 <span className="flex flex-col">
                   <p className="  text-sm font-normal md:text-xl md:font-medium">
                     New Chicago school budget relies on state pension
@@ -117,7 +119,7 @@ function Herosection3() {
                 </span>
               </div>
               <div className="flex  flex-1 w-[25rem] gap-4">
-                <Image src={Blog3.src} className="h-20 w-30" alt="Blog 3" />
+                <Image src={Blog3.src} width={30} height={20} alt="Blog 3" />
                 <span className="flex flex-col">
                   <p className="text-sm font-normal md:text-xl md:font-medium">
                     New Chicago school budget relies on state pension
@@ -154,7 +156,9 @@ function Herosection3() {
                     <Image
                       alt="teacher1"
                       src={teacher1.src}
-                      className="h-20 w-32 rounded-full"
+                      className=" rounded-full"
+                      width={32}
+                      height={20}
                     />
                   </div>
                   <span className="flex flex-col">
@@ -173,7 +177,9 @@ function Herosection3() {
                 <div className="flex gap-5">
                   <Image
                     src={teacher2.src}
-                    className="h-20 w-32 rounded-full"
+                    className=" rounded-full"
+                    width={32}
+                    height={20}
                     alt="Teacher 2"
                   />
                   <span className="flex flex-col ">
@@ -194,7 +200,9 @@ function Herosection3() {
                     <Image
                       alt="teacher3"
                       src={teacher3.src}
-                      className="h-20 w-32 rounded-full "
+                      width={32}
+                      height={20}
+                      className="rounded-full "
                     />
                   </span>
                   <span className="flex flex-col">
@@ -212,7 +220,12 @@ function Herosection3() {
             </div>
             <div className="text-3xl font-medium mt-4">FEATURED COURSES</div>
             <div className="flex mt-3 gap-5">
-              <Image src={course12.src} alt="Course 12" />
+              <Image
+                src={course12.src}
+                alt="Course 12"
+                width={32}
+                height={20}
+              />
               <span className="flex flex-col">
                 <p>swift programming for beginners</p>
                 <p>Sarah Johnson</p>
@@ -231,7 +244,12 @@ function Herosection3() {
               </span>
             </div>
             <div className="flex  mt-3 gap-5">
-              <Image src={course13.src} alt="Course 13" />
+              <Image
+                src={course13.src}
+                alt="Course 13"
+                width={32}
+                height={20}
+              />
               <span className="flex flex-col">
                 <p>swift programming for beginners</p>
                 <p>Sarah Johnson</p>
@@ -250,7 +268,12 @@ function Herosection3() {
               </span>
             </div>
             <div className="flex  mt-3 gap-5">
-              <Image src={course14.src} alt="Course 14" />
+              <Image
+                src={course14.src}
+                alt="Course 14"
+                width={32}
+                height={20}
+              />
               <span className="flex flex-col">
                 <p>swift programming for beginners</p>
                 <p>Sarah Johnson</p>

@@ -10,7 +10,12 @@ function Header() {
     <>
       <nav className="  w-full bg-white justify-between main-container sticky top-0 h-24 center  hidden lg:flex   ">
         <div className=" h-[10rem] w-[10rem] center">
-          <Image src={utkaleducation.src} alt="Utkal Education" />
+          <Image
+            src={utkaleducation.src}
+            alt="Utkal Education"
+            width={100}
+            height={100}
+          />
         </div>
         <ul className="flex  gap-8 ">
           {navArr.map((item) => (
