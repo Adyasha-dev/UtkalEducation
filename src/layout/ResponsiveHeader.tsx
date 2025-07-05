@@ -23,7 +23,7 @@ function ResponsiveHeader() {
             />
           </Link>
           <MenuIcon
-            className="!text-5xl"
+            className="  !text-4xl md:!text-5xl"
             onClick={() => {
               setIsOpen(!isOpen);
             }}

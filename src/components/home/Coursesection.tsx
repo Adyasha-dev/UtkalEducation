@@ -36,7 +36,7 @@ const settings = {
 export default function Breadcrumb() {
   return (
     <section className="overflow-hidden main-container py-14 flex flex-col">
-      <p className="lg:text-5xl  text-2xl font-bold mb-4  md:text-3xl">
+      <p className="lg:text-4xl  text-2xl font-bold mb-4  md:text-3xl">
         POPULAR COURSES
       </p>
 
@@ -63,7 +63,7 @@ export default function Breadcrumb() {
                   </span>
                 </span>
                 <button className="text-sm lg:text-lg text-white bg-blue-500 px-3 py-1 rounded-md">
-                  ${item.price}
+                  ₹{item.price}
                 </button>
               </div>
               <div className="mt-4">

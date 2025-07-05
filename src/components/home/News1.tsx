@@ -45,7 +45,7 @@ import Image from "next/image";
 function News1() {
   return (
     <div className="main-container py-6 bg-white">
-      <p className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+      <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
         LATEST NEWS
       </p>
 
@@ -64,7 +64,7 @@ function News1() {
             />
 
             <div className="flex gap-3 px-2 py-2 items-center">
-              <span className="w-14  lg:w-16flex flex-col items-center justify-center border-2 border-yellow-300 rounded-md text-yellow-400 text-sm font-semibold py-1">
+              <span className="w-14  lg:w-32 flex flex-col items-center justify-center border-2 border-yellow-300 rounded-md text-yellow-400 text-sm font-semibold py-1">
                 <p>{item.count}</p>
                 <p>{item.month}</p>
               </span>

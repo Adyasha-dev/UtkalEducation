@@ -95,6 +95,9 @@ function Footer() {
             </span>
           </span>
         </div>
+        <p className="text-gray-200  max-w-5xl text-lg text-center">
+          copyright@2025.Designer by NthPsd. All Rights Reserved.
+        </p>
       </div>
     </>
   );

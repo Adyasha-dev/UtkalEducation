@@ -19,11 +19,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import Image from "next/image";
+
 function Herosection3() {
   const itemsPerPage = 9;
-
   const [currentPage, setCurrentPage] = useState(1);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [courselist, setCourselist] = useState<blogArrType[]>([]);
 
   const handlePrevPageNavigation = () => {
@@ -34,10 +33,8 @@ function Herosection3() {
     if (currentPage * itemsPerPage <= blogArr.length) {
       setCurrentPage((prev) => prev + 1);
     } else {
-      window.alert("oops! you reached at the end page");
+      alert("Oops! You reached the last page.");
     }
-    //  1 * 9 = 9 <  12
-    //  2 * 9 = 18 < 12 XXXX
   };
 
   useEffect(() => {
@@ -45,256 +42,193 @@ function Herosection3() {
     const endIdx = currentPage * itemsPerPage;
     setCourselist(blogArr.slice(startIdx, endIdx));
   }, [currentPage]);
+
   return (
-    <>
-      <div className="main-container my-6  ">
-        <div className="text-5xl font-bold py-5">News & Blog</div>
-        <div className=" lg:flex  ">
-          <div className="bg-slate-200 w-full px-3 py-4">
-            <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-9">
-              {blogArr.map((item) => (
-                <div
-                  className="w-full shadow-md  rounded-md bg-white gap-5"
-                  key={item.id.toString()}
-                >
+    <div className="main-container mx-auto px-4 py-8  ">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">News & Blog</h2>
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-16">
+        {/* Left Blog Grid Section */}
+        <div className="w-full lg:w-2/3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courselist.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300"
+              >
+                <div className="overflow-hidden">
                   <Image
                     src={item.img.src}
                     alt="Blog Image"
-                    className=" hover:scale-105 overflow-hidden"
+                    className="hover:scale-105 transition-transform duration-300 ease-in-out w-full h-[200px] object-cover"
                     width={500}
                     height={300}
                   />
-
-                  <div className="flex  gap-3 px-2 py-2 ">
-                    <span className="flex flex-col border-solid border-yellow-300 border-2 text-center">
-                      <p className="text-yellow-400">{item.count}</p>
-                      <p className="text-yellow-400">{item.month}</p>
-                    </span>
-                    <p className="text- lg:text-xl text-xs">{item.title}</p>
-                  </div>
-                  <div className="px-2">
-                    <p className=" text-sm text-gray-500">{item.description}</p>
-                  </div>
                 </div>
-              ))}
-            </div>
-            <div className="flex flex-row space-x-3 justify-center items-center mx-auto  my-8">
-              <div
-                className="px-2 py-1 rounded-md font-semibold  text-xl text-center bg-orange-400 text-white"
-                onClick={handlePrevPageNavigation}
-              >
-                Prev
+                <div className="p-4">
+                  <div className="flex items-start gap-4 mb-2">
+                    <div className="border-2 border-yellow-300 text-center px-2 py-1 text-yellow-400 text-sm font-semibold">
+                      <p>{item.count}</p>
+                      <p>{item.month}</p>
+                    </div>
+                    <p className="text-lg font-medium">{item.title}</p>
+                  </div>
+                  <p className="text-sm text-gray-600">{item.description}</p>
+                </div>
               </div>
-              <div className="px-2 py-1 rounded-md font-semibold text-xl text-center bg-orange-400 text-white">
-                {currentPage}
-              </div>
-              <div
-                className="px-2 py-1 rounded-md font-semibold text-xl text-center bg-orange-400 text-white"
-                onClick={handleNextPageNavigation}
-              >
-                Next
-              </div>
-            </div>
+            ))}
           </div>
 
-          <div className=" w-full lg:w-[40rem] ">
-            <div className="text-3xl font-medium">RECENT POST</div>
-            <div className="flex flex-col gap-4">
-              <div className="flex  flex-1 w-[25rem] mt-5 gap-4">
-                <Image src={Blog2.src} width={30} height={20} alt="Blog 2" />
-                <span className="flex flex-col mx-auto flex-1">
-                  <p className="text-sm font-normal md:text-xl md:font-medium  ">
-                    New Chicago school budget relies on state pension
-                  </p>
-                  <p className="text-sm ">May 18, 2016</p>
-                </span>
+          {/* Pagination */}
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <button
+              className="px-4 py-2 bg-orange-400 text-white rounded-md font-semibold"
+              onClick={handlePrevPageNavigation}
+            >
+              Prev
+            </button>
+            <span className="px-4 py-2 bg-orange-400 text-white rounded-md font-semibold">
+              {currentPage}
+            </span>
+            <button
+              className="px-4 py-2 bg-orange-400 text-white rounded-md font-semibold"
+              onClick={handleNextPageNavigation}
+            >
+              Next
+            </button>
+          </div>
+        </div>
+
+        {/* Right Sidebar Section */}
+        <div className="w-full lg:w-1/3 shadow-lg">
+          <div className="mb-8">
+            <h3 className="text-2xl  md:text-3xl font-semibold mb-4">
+              RECENT POST
+            </h3>
+            {[
+              { src: Blog2, name: "Blog Post 1", date: "May 18, 2016" },
+              { src: Blog1, name: "Blog Post 2", date: "May 17, 2016" },
+              { src: Blog3, name: "Blog Post 3", date: "May 16, 2016" },
+            ].map((recent, index) => (
+              <div key={index} className="flex items-start gap-4 mb-4">
+                <Image
+                  src={recent.src}
+                  width={100}
+                  height={50}
+                  alt={`Blog ${index + 1}`}
+                />
+                <div>
+                  <p className="text-base font-medium">{recent.name}</p>
+                  <p className="text-sm text-gray-500">{recent.date}</p>
+                </div>
               </div>
-              <div className="flex  flex-1 w-[25rem]  gap-4">
-                <Image src={Blog1.src} width={30} height={20} alt="Blog 1" />
-                <span className="flex flex-col">
-                  <p className="  text-sm font-normal md:text-xl md:font-medium">
-                    New Chicago school budget relies on state pension
-                  </p>
-                  <p className="text-sm ">May 18, 2016</p>
-                </span>
-              </div>
-              <div className="flex  flex-1 w-[25rem] gap-4">
-                <Image src={Blog3.src} width={30} height={20} alt="Blog 3" />
-                <span className="flex flex-col">
-                  <p className="text-sm font-normal md:text-xl md:font-medium">
-                    New Chicago school budget relies on state pension
-                  </p>
-                  <p className="text-sm ">May 18, 2016</p>
-                </span>
-              </div>
-            </div>
-            <div className="">
-              <div className="text-3xl font-medium  flex-1 mt-4">
-                Categories
-              </div>
-              <span className="flex flex-col gap-4 mt-4 ">
-                <span>Web Design (9)</span>
-                <span>App Design (3)</span>
-                <span>Graphic Design (23)</span>
-                <span>Game Design (5)</span>
-                <span>UI-UX Design (7)</span>
-                <span>Print Design (2)</span>
-                <span>Logo - Typo Design (5)</span>
-              </span>
-            </div>
-            <div className=" ">
-              <div className="text-3xl font-medium  flex-1 mt-4">
-                Browse by Teacher
-              </div>
-              <p className="text-sm text-gray-400 mx-auto  mt-4">
-                Lorem ipsum sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div className="flex flex-col mt-4">
-                <div className="flex gap-5 ">
-                  <div className="flex gap-6">
-                    <Image
-                      alt="teacher1"
-                      src={teacher1.src}
-                      className=" rounded-full"
-                      width={32}
-                      height={20}
-                    />
+            ))}
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold mb-4">Categories</h3>
+            <ul className="flex flex-col gap-2 text-gray-700">
+              <li>Web Design (9)</li>
+              <li>App Design (3)</li>
+              <li>Graphic Design (23)</li>
+              <li>Game Design (5)</li>
+              <li>UI-UX Design (7)</li>
+              <li>Print Design (2)</li>
+              <li>Logo - Typo Design (5)</li>
+            </ul>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold mb-2">Browse by Teacher</h3>
+            <p className="text-sm text-gray-500 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor.
+            </p>
+            {[
+              { img: teacher1, name: "John Doe", role: "Mathematics" },
+              { img: teacher2, name: "Jane Smith", role: "Science" },
+              { img: teacher3, name: "Alex Brown", role: "History" },
+            ].map((teacher, i) => (
+              <div key={i} className="flex items-center gap-4 mb-4">
+                <Image
+                  src={teacher.img.src}
+                  alt={`Teacher ${i + 1}`}
+                  className="rounded-full"
+                  width={100}
+                  height={50}
+                />
+                <div>
+                  <p className="font-bold">{teacher.name}</p>
+                  <p className="text-sm text-gray-500">{teacher.role}</p>
+                  <div className="flex gap-2 text-blue-500">
+                    <a href="https://www.facebook.com" aria-label="Facebook">
+                      <FacebookIcon />
+                    </a>
+                    <a href=" https://twitter.com" aria-label="Twitter">
+                      <TwitterIcon />
+                    </a>
+                    <a href="https://in.linkedin.com" aria-label="LinkedIn">
+                      <LinkedInIcon />
+                    </a>
+                    <a href="https://www.youtube.com" aria-label="YouTube">
+                      <YouTubeIcon />
+                    </a>
                   </div>
-                  <span className="flex flex-col">
-                    <p>Charlie Brown</p>
-                    <p>Web Designer</p>
-                    <span className="flex">
-                      <FacebookIcon />
-                      <TwitterIcon />
-                      <LinkedInIcon />
-                      <YouTubeIcon />
-                    </span>
-                  </span>
                 </div>
               </div>
-              <div className="flex flex-col mt-4">
-                <div className="flex gap-5">
-                  <Image
-                    src={teacher2.src}
-                    className=" rounded-full"
-                    width={32}
-                    height={20}
-                    alt="Teacher 2"
-                  />
-                  <span className="flex flex-col ">
-                    <p>Charlie Brown</p>
-                    <p>Web Designer</p>
-                    <span className="flex">
-                      <FacebookIcon />
-                      <TwitterIcon />
-                      <LinkedInIcon />
-                      <YouTubeIcon />
-                    </span>
-                  </span>
+            ))}
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">FEATURED COURSES</h3>
+            {[
+              {
+                img: course12,
+                name: "Course 1",
+                person: "By John Doe",
+                fees: "5000",
+              },
+              {
+                img: course13,
+                name: "Course 2",
+                person: "By Jane Smith",
+                fees: "6000",
+              },
+              {
+                img: course14,
+                name: "Course 3",
+                person: "By Alex Brown",
+                fees: "7000",
+              },
+            ].map((course, i) => (
+              <div key={i} className="flex gap-4 mb-5">
+                <Image
+                  src={course.img.src}
+                  alt={`Course ${i + 1}`}
+                  width={100}
+                  height={50}
+                />
+                <div className="flex flex-col">
+                  <p className="font-bold">{course.name}</p>
+                  <p className="text-sm text-gray-600">{course.person}</p>
+                  <div className="flex items-center gap-3">
+                    <button className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm">
+                      ₹{course.fees}
+                    </button>
+                    <div className="flex text-yellow-500">
+                      <StarBorderIcon />
+                      <StarBorderIcon />
+                      <StarBorderIcon />
+                      <StarBorderIcon />
+                      <StarBorderIcon />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col mt-4">
-                <div className="flex gap-5">
-                  <span className="flex gap-6">
-                    <Image
-                      alt="teacher3"
-                      src={teacher3.src}
-                      width={32}
-                      height={20}
-                      className="rounded-full "
-                    />
-                  </span>
-                  <span className="flex flex-col">
-                    <p>Charlie Brown</p>
-                    <p>Web Designer</p>
-                    <span className="flex">
-                      <FacebookIcon />
-                      <TwitterIcon />
-                      <LinkedInIcon />
-                      <YouTubeIcon />
-                    </span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="text-3xl font-medium mt-4">FEATURED COURSES</div>
-            <div className="flex mt-3 gap-5">
-              <Image
-                src={course12.src}
-                alt="Course 12"
-                width={32}
-                height={20}
-              />
-              <span className="flex flex-col">
-                <p>swift programming for beginners</p>
-                <p>Sarah Johnson</p>
-                <span className="flex gap-3">
-                  <button className="bg-blue-500 text-white px-3 py-2 rounded-md">
-                    $170
-                  </button>
-                  <span className="flex">
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                  </span>
-                </span>
-              </span>
-            </div>
-            <div className="flex  mt-3 gap-5">
-              <Image
-                src={course13.src}
-                alt="Course 13"
-                width={32}
-                height={20}
-              />
-              <span className="flex flex-col">
-                <p>swift programming for beginners</p>
-                <p>Sarah Johnson</p>
-                <span className="flex gap-3">
-                  <button className="bg-blue-500 text-white px-3 py-2 rounded-md">
-                    $170
-                  </button>
-                  <span className="flex">
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                  </span>
-                </span>
-              </span>
-            </div>
-            <div className="flex  mt-3 gap-5">
-              <Image
-                src={course14.src}
-                alt="Course 14"
-                width={32}
-                height={20}
-              />
-              <span className="flex flex-col">
-                <p>swift programming for beginners</p>
-                <p>Sarah Johnson</p>
-                <span className="flex gap-3">
-                  <button className="bg-blue-500 text-white px-3 py-2 rounded-md">
-                    $170
-                  </button>
-                  <span className="flex">
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                    <StarBorderIcon />
-                  </span>
-                </span>
-              </span>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

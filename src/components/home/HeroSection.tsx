@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 function HeroSection() {
   return (
     <>
@@ -16,12 +18,14 @@ function HeroSection() {
             technical expertise with behavioral training, fostering a culture of
             continuous learning and adaptability.
           </p>
-          <button
-            className="border-2 border-black  bg-orange-500 hover:bg-white  text-white  hover:text-black px-4 py-2 md:py-2 rounded-md
+          <Link href="/courses">
+            <button
+              className="border-2 border-black  bg-orange-500 hover:bg-white  text-white  hover:text-black px-4 py-2 md:py-2 rounded-md
              w-full sm:w-48 md:w-96 lg:w-56 my-3 transition duration-300"
-          >
-            VIEW ALL Courses
-          </button>
+            >
+              VIEW ALL Courses
+            </button>
+          </Link>
         </div>
         {/* right side icon cards*/}
         <div className="w-full flex justify-center mt-3 lg:items-start   gap-2 lg:w-1/2">

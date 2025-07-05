@@ -127,10 +127,12 @@ function Lastsection2() {
 
   return (
     <div className="main-container">
-      <div className="font-bold text-4xl">FAQ & CERTIFICATIONS</div>
+      <div className="font-bold  text-3xl lg:text-4xl">
+        FAQ & CERTIFICATIONS
+      </div>
 
       {/* Container to arrange FAQ & Certificates side by side */}
-      <div className="flex flex-col md:flex-row gap-8 py-14 w-full">
+      <div className="flex flex-col md:flex-row gap-8 py-8 lg:py-14 w-full">
         {/* FAQ Section */}
         <div className="w-full md:w-1/2">
           {faqArr.map((item, index) => (
