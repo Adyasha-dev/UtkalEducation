@@ -36,9 +36,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Image from "next/image";
 function Box1() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -56,10 +56,12 @@ function Box1() {
         <Slider {...settings}>
           {boxArr.map((item) => (
             <div key={item.id.toString()} className="flex justify-center px-4">
-              <img
+              <Image
                 src={item.img.src}
                 alt="Slider Image"
                 className="w-full h-48 object-contain" // Ensures proper scaling
+                width={480}
+                height={448}
               />
             </div>
           ))}

@@ -9,3 +9,4 @@ export { default as Team8 } from "./Team8.jpg";
 export { default as Team9 } from "./Team9.jpg";
 export { default as Team10 } from "./Team10.jpg";
 export { default as Team11 } from "./Team11.jpg";
+export { default as front } from "./front.jpg";

@@ -7,8 +7,10 @@ import Slider from "react-slick";
 import { contentArr } from "@/utils/home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-var settings = {
-  dots: true,
+import Image from "next/image";
+const settings = {
+  arrows: false,
+  dots: false,
   infinite: true,
   speed: 500,
   autoplay: true,
@@ -27,21 +29,32 @@ export default function BreadCrumb() {
   return (
     <>
       <div
-        className="relative  h-auto overflow-hidden "
+        className="relative  w-full  overflow-hidden "
         data-aos="zoom-out"
         data-aos-easing="linear"
         data-aos-duration="1500"
       >
-        <img src={home2.src} className=" w-full h-auto" />
-        <div className="absolute inset-0  bg-black/50"></div>
-        <div className="  z-30 absolute top-1/2 !-translate-y-1/2 bottom-0 right-0 left-0 ">
-          <Slider {...settings}>
+        <div className="relative  w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[800px]">
+          <Image
+            src={home2.src}
+            alt="Home 2"
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0  bg-black/60 z-10"></div>
+        <div className="  z-20 absolute inset-0  flex justify-center items-center text-center">
+          <Slider {...settings} className="w-full max-w-4xl lg:max-w-7xl px-4">
             {contentArr.map((item) => (
-              <div key={item.id.toString()} className="w-full h-screen ">
-                <h3 className="text-white font-bold text-3xl  flex justify-center gap-6">
+              <div
+                key={item.id.toString()}
+                className=" flex flex-col   justify-center items-center  px-4  text-center "
+              >
+                <h3 className="text-white font-bold text-lg  md:text-4xl  lg:text-5xl flex justify-center gap-6 ">
                   {item.title}
                 </h3>
-                <h3 className="text-white text-sm flex justify-center gap-6 ">
+                <h3 className="text-white text-xs md:text-lg lg:text-xl flex  gap-6 max-w-fit text-center ">
                   {item.description}
                 </h3>
               </div>

@@ -7,6 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Collapse } from "@mui/material";
 import { navArr } from "@/utils/navbar";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Image from "next/image";
 function ResponsiveHeader() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
@@ -14,10 +15,15 @@ function ResponsiveHeader() {
       <section className=" sticky top-0 ">
         <section className="w-full h-30  justify-between items-center flex lg:hidden">
           <Link href="/">
-            <img src={utkaleducation.src} className="h-[10rem] w-[10rem] " />
+            <Image
+              src={utkaleducation.src}
+              width={100}
+              height={100}
+              alt="Utkal Education"
+            />
           </Link>
           <MenuIcon
-            className="!text-5xl"
+            className="  !text-4xl md:!text-5xl"
             onClick={() => {
               setIsOpen(!isOpen);
             }}

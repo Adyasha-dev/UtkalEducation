@@ -7,3 +7,4 @@ export { default as six } from "./six.jpg";
 export { default as seven } from "./seven.jpg";
 export { default as nine } from "./nine.webp";
 export { default as tenth } from "./tenth.jpeg";
+export { default as courses } from "./courses.jpg";

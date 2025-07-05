@@ -8,86 +8,78 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 function Teacher() {
   return (
-    <>
-      <div className="main-container">
-        <div className="py-6 ">
-          <p className="text-5xl font-bold">OUR TEACHER</p>
-        </div>
-        <Swiper
-          // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={true}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          breakpoints={{
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 2,
-            },
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          <div className=" main-container  gap-10 py-14 ">
-            {teacherArr.map((item) => (
-              <SwiperSlide key={item.id.toString()}>
-                <div className="shadow-md rounded-md bg-white py-4 px-4 ">
-                  <img
-                    src={item.img.src}
-                    className="hover:scale-105 h-[28rem] w-[28rem]"
-                  />
-                  <div className="text-2xl text-gray mt-2 ">{item.name}</div>
-
-                  <span className="flex gap-1 mt-2 ">
-                    <FacebookIcon />
-                    <TwitterIcon />
-                    <LinkedInIcon />
-                    <YouTubeIcon />
-                  </span>
-
-                  <span className="flex mt-2 ">
-                    <StarBorderIcon />
-                    <p className="text-gray-500 tetx-xl">{item.designation}</p>
-                  </span>
-                  <span className="flex mt-2">
-                    <LocalPhoneIcon />
-                    <p className="text-gray-500 mt-2 tetx-xl">
-                      {item.phonenumber}
-                    </p>
-                  </span>
-                  <span className="flex mt-2">
-                    <EmailIcon />
-                    <p className="text-gray-500 tetx-xl">{item.email}</p>
-                  </span>
-                </div>
-              </SwiperSlide>
-            ))}
-          </div>
-        </Swiper>
+    <div className="main-container">
+      <div className="py-6">
+        <p className="text-3xl lg:text-4xl font-bold">OUR TEACHER</p>
       </div>
-    </>
+
+      <Swiper
+        modules={[A11y, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        autoplay={true}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+        <div className="main-container gap-10 py-14">
+          {teacherArr.map((item) => (
+            <SwiperSlide key={item.id.toString()}>
+              <div className="shadow-md rounded-md bg-white py-4 px-4">
+                <Image
+                  src={item.img.src}
+                  alt={item.name}
+                  width={320}
+                  height={320}
+                  className="hover:scale-105 object-cover overflow-hidden"
+                />
+                <div className="text-xl font-semibold text-gray mt-2">
+                  {item.name}
+                </div>
+
+                <span className="flex gap-6 mt-2">
+                  <FacebookIcon className="text-blue-600" />
+                  <TwitterIcon className="text-blue-400" />
+                  <LinkedInIcon className="text-blue-700" />
+                  <YouTubeIcon className="text-red-600" />
+                </span>
+
+                <span className="flex mt-2 gap-2">
+                  <StarBorderIcon className="text-gray-500" />
+                  <p className="text-gray-500 text-lg">{item.designation}</p>
+                </span>
+                <span className="flex mt-2 gap-2">
+                  <LocalPhoneIcon className="text-gray-500" />
+                  <p className="text-gray-500 text-lg mt-0.5">
+                    {item.phonenumber}
+                  </p>
+                </span>
+                <span className="flex mt-2 gap-2">
+                  <EmailIcon className="text-gray-500" />
+                  <p className="text-gray-500 text-lg">{item.email}</p>
+                </span>
+              </div>
+            </SwiperSlide>
+          ))}
+        </div>
+      </Swiper>
+    </div>
   );
 }
 

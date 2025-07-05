@@ -86,9 +86,10 @@ import { Collapse } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 function Lastsection2() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -126,10 +127,12 @@ function Lastsection2() {
 
   return (
     <div className="main-container">
-      <div className="font-bold text-4xl">FAQ & CERTIFICATIONS</div>
+      <div className="font-bold  text-3xl lg:text-4xl">
+        FAQ & CERTIFICATIONS
+      </div>
 
       {/* Container to arrange FAQ & Certificates side by side */}
-      <div className="flex flex-col md:flex-row gap-8 py-14 w-full">
+      <div className="flex flex-col md:flex-row gap-8 py-8 lg:py-14 w-full">
         {/* FAQ Section */}
         <div className="w-full md:w-1/2">
           {faqArr.map((item, index) => (
@@ -169,10 +172,12 @@ function Lastsection2() {
                   className="flex flex-col items-center"
                   key={item.id.toString()}
                 >
-                  <img
+                  <Image
                     src={item.img.src}
                     className="w-full h-auto rounded-md object-cover"
                     alt="Certificate"
+                    width={500}
+                    height={300}
                   />
                   <p className="text-gray-400 text-xl mt-2">{item.content}</p>
                 </div>

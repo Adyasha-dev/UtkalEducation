@@ -12,3 +12,4 @@ export { default as teacher3 } from "./teacher3.jpg";
 export { default as course12 } from "./course12.jpg";
 export { default as course13 } from "./course13.jpg";
 export { default as course14 } from "./course14.jpg";
+export { default as front1 } from "./front1.webp";
