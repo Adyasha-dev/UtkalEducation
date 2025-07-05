@@ -82,21 +82,33 @@ function Footer() {
           </form>
           <span className="flex gap-3">
             <span>
-              <FacebookIcon className="text-white !text-[2rem]" />
+              <a href="https://www.facebook.com">
+                <FacebookIcon className="text-white !text-[2rem]" />
+              </a>
             </span>
             <span>
-              <TwitterIcon className="text-white !text-[2rem]" />
+              <a href="https://x.com">
+                <TwitterIcon className="text-white !text-[2rem]" />{" "}
+              </a>
             </span>
             <span>
-              <LinkedInIcon className="text-white !text-[2rem]" />
+              <a href="https://in.linkedin.com">
+                <LinkedInIcon className="text-white !text-[2rem]" />
+              </a>
             </span>
+
             <span>
-              <YouTubeIcon className="text-white !text-[2rem]" />
+              <a href="https://www.youtube.com">
+                {" "}
+                <YouTubeIcon className="text-white !text-[2rem]" />
+              </a>
             </span>
           </span>
         </div>
-        <p className="text-gray-200  max-w-5xl text-lg text-center">
-          copyright@2025.Designer by NthPsd. All Rights Reserved.
+      </div>
+      <div className="w-full bg-black py-4 flex justify-center px-2 items-center ">
+        <p className="text-gray-200 text-sm md:text-base text-center  border-t-2 border-gray-400 w-full ">
+          copyright © 2025. Designed by Utkal Group. All Rights Reserved.
         </p>
       </div>
     </>

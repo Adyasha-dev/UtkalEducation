@@ -12,7 +12,7 @@ function ResponsiveHeader() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
-      <section className=" sticky top-0 ">
+      <section className="  sticky top-0 z-10 ">
         <section className="w-full h-30  justify-between items-center flex lg:hidden">
           <Link href="/">
             <Image
